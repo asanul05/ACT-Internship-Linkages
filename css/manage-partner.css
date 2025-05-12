@@ -1,0 +1,77 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.manage-partners-body h1,
+.manage-partners-body h2{
+    color: #333;
+}
+
+.manage-partners-body form {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.manage-partners-body form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.manage-partners-body form input,
+.manage-partners-body form select,
+.manage-partners-body form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.manage-partners-body form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.manage-partners-body form button:hover {
+    background-color: #0056b3;
+}
+
+.manage-partners-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.manage-partners-body table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.manage-partners-body table th {
+    background-color: #f4f4f4;
+}
+
+.manage-partners-body table img {
+    max-width: 50px;
+    height: auto;
+}
+
+.manage-partners-body a {
+    text-decoration: none;
+}
+
+.manage-partners-body a:hover {
+    text-decoration: underline;
+}

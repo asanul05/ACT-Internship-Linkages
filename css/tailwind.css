@@ -1,0 +1,173 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom responsive styles */
+@layer components {
+  /* Hero Section */
+  .hero-section-cont {
+    @apply w-full h-[900px] md:h-[700px] sm:h-[500px];
+  }
+
+  .homepage-video-container {
+    @apply relative w-full h-full overflow-hidden;
+  }
+
+  .homepage-background-video {
+    @apply w-full h-full object-cover absolute top-0 left-0 opacity-0 transition-opacity duration-1000;
+  }
+
+  .Hero-Title-Cont {
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-center z-10 w-full h-full flex flex-col items-center justify-start;
+  }
+
+  .Hero-Title {
+    @apply text-6xl md:text-5xl sm:text-4xl font-bold;
+  }
+
+  .Hero-Subtitle {
+    @apply text-xl md:text-lg sm:text-base uppercase mt-[-30px] text-white;
+  }
+
+  .hero-apply {
+    @apply w-[11%] h-[50px] no-underline text-white my-5;
+  }
+
+  .hero-button {
+    @apply w-full h-full border border-white rounded-[0_45px_0_45px] text-xl md:text-lg sm:text-base flex items-center justify-center transition-all duration-300;
+  }
+
+  /* News Section */
+  .news-header-container {
+    @apply flex justify-between items-center p-4 md:p-4 sm:p-2;
+  }
+
+  .news-title {
+    @apply text-4xl md:text-3xl sm:text-2xl font-bold text-wmsu-red;
+  }
+
+  .news-grid {
+    @apply grid grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-4 md:gap-3 sm:gap-2 p-4;
+  }
+
+  .news-item {
+    @apply bg-white rounded-lg overflow-hidden shadow-md;
+  }
+
+  .news-item img {
+    @apply w-full h-48 md:h-40 sm:h-32 object-cover;
+  }
+
+  /* Research Archives */
+  .research-archives {
+    @apply bg-white p-8 md:p-4 sm:p-2;
+  }
+
+  .research-title {
+    @apply text-4xl md:text-3xl sm:text-2xl font-bold text-wmsu-red text-center mb-8;
+  }
+
+  .research-content {
+    @apply grid grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-8 md:gap-4 sm:gap-2;
+  }
+
+  /* About Section */
+  .about-page-title {
+    @apply bg-white p-8 md:p-4 sm:p-2 relative;
+  }
+
+  .about-section {
+    @apply bg-wmsu-red;
+  }
+
+  .about-container {
+    @apply flex justify-end relative p-0 md:p-0 sm:p-0;
+  }
+
+  .about-content {
+    @apply w-1/2 md:w-full sm:w-full p-4 text-white;
+  }
+
+  /* President's Corner */
+  .presidents-corner {
+    @apply bg-white p-8 md:p-4 sm:p-2;
+  }
+
+  .corner-container {
+    @apply grid grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-8 md:gap-4 sm:gap-2;
+  }
+
+  .corner-image {
+    @apply w-full h-full;
+  }
+
+  .corner-image img {
+    @apply w-full h-full object-cover rounded-lg;
+  }
+
+  /* Campuses Section */
+  .wmsu-campuses {
+    @apply bg-white p-8 md:p-4 sm:p-2;
+  }
+
+  .camp-cont {
+    @apply flex md:flex-col sm:flex-col h-[30.375rem] md:h-auto sm:h-auto;
+  }
+
+  .camp-cont-left,
+  .camp-cont-right {
+    @apply flex-grow w-[49.925%] md:w-full sm:w-full h-auto flex-shrink-0 relative;
+  }
+
+  .camp-cont-mid {
+    @apply flex-grow w-[0.15%] md:w-full sm:w-full h-full md:h-[0.15%] sm:h-[0.15%] bg-wmsu-red;
+  }
+
+  /* Services Section */
+  .wmsu-services {
+    @apply bg-white p-8 md:p-4 sm:p-2;
+  }
+
+  .services-cont {
+    @apply grid grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-4 md:gap-3 sm:gap-2;
+  }
+
+  .services-rectangle {
+    @apply w-full md:w-auto;
+  }
+
+  .rectangle-text {
+    @apply flex justify-center items-center md:mt-4;
+  }
+
+  .rectangle-text-hide {
+    @apply block text-center;
+  }
+
+  /* Follow WMSU Section */
+  .follow-wmsu {
+    @apply bg-white p-8 md:p-4 sm:p-2;
+  }
+
+  .follow-cont {
+    @apply flex md:flex-col sm:flex-col h-[30.375rem] md:h-auto sm:h-auto;
+  }
+
+  .follow-cont-left,
+  .follow-cont-right {
+    @apply flex-grow w-1/2 md:w-full sm:w-full h-full relative;
+  }
+
+  /* Utility Classes */
+  .tablet-only {
+    @apply hidden md:block sm:hidden;
+  }
+
+  .mobile-only {
+    @apply hidden md:hidden sm:block;
+  }
+
+  .desktop-only {
+    @apply block md:hidden sm:hidden;
+  }
+} 
