@@ -5,7 +5,7 @@
 
 <body>
     <?php require_once '../__includes/navbar.php'; ?>
-    <div class="linkage-body">
+    <div class="linkage-home-body">
         <?php require_once '../page-views/linkages-home-views.php'; ?>
     </div>
     <?php

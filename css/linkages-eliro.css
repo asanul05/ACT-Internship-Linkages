@@ -1,0 +1,256 @@
+.eliro-hero{
+    width: 100vw;
+    height: 720px;
+    background-color: #00ffff;
+    position: relative;
+    margin-bottom: 500px;
+}
+
+.eliro-hero-img-cont img{
+    position: absolute;
+    z-index: 0;
+    top: 0;
+}
+.eliro-hero-text-cont{
+    width: 1110.67px;
+    color: #fff;
+    position: absolute;
+    bottom: 25%;
+    left: 10%;
+}
+
+.eliro-hero-text-cont h1{
+    font-size: 58.5px;
+    font-weight: 700;
+    margin: 0;
+}
+
+
+/* ------------------- */
+.eliro-description{
+    width: 1178px;
+    height: 548px;
+    background-color: #7c0a02;
+    position: absolute;
+    bottom: -25%;
+    left: 10%;
+
+    padding: 80px 60px 60px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.eliro-description-top h1{
+    font-size: 69.01px;
+    font-weight: 600;
+    color: #fff;   
+    margin: 0;
+}
+
+.eliro-description-top p{
+    font-size: 16.12px;
+    font-weight: 500;
+    color: #fff;  
+    line-height: 1.1; 
+}
+
+.eliro-description-bottom p{
+    font-size: 17.57px;
+    color: #fff;
+}
+
+
+
+
+
+/* -------------------- */
+.eliro-staffs{
+    margin-top: 100px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* delete laterrr ha */
+    /* background-color: black; */
+    /* margin-bottom: 100px; */
+    /* height: 610px; */
+}
+
+.eliro-staffs-cont{
+    width: 1178px;
+    /* background-color: pink; */
+    /* border: solid 1px red; */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    /*  */
+    /* height: 516px; */
+    
+}
+
+.eliro-staffs-title h1{
+    font-size: 61.93px;
+    font-weight: 600;
+    color: #7c0a02;
+    margin-bottom: 30px;
+}
+
+.eliro-staffs-boxs-cont{
+    /* border: solid 2px yellow; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.eliro-staffs-boxs{
+    height: 123px;
+    width: 578px;
+    border: solid 4px #E2E8F0;
+    position: relative;
+
+    flex: 1 1 calc(50% - 20px);
+}
+
+.eliro-staffs-boxs:last-child {
+    flex: 0 1 calc(50% - 10px); 
+    /* margin: 0;  */
+}
+
+
+.eliro-staffs-boxs-pos{
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+}
+
+.eliro-staffs-boxs h1{
+    font-size: 26.67px;
+    font-weight: 600;
+    line-height: 1;
+    margin: 0;
+}
+.eliro-staffs-boxs p{
+    font-size: 18.64px;
+    font-weight: 500;
+    margin: 0;
+}
+
+
+
+/* ------------------------- */
+.linkages-office-functions{
+    margin-top: 100px;
+    width: 100vw;
+    display: flex;
+    justify-content: center   ;
+    align-items: center;
+    position: relative;
+
+    height: 610px;
+    /* background-color: #7c0a02;   */
+}
+
+.linkages-office-functions-img{
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+}
+
+.linkages-office-functions-cont{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+    width: 1200px;
+    z-index: 1;
+
+
+    height: 90%;
+    /* background-color: pink; */
+}
+
+.linkages-office-functions-cont-divider{
+    width: 1px;
+    border: solid 1px #E2E8F0;
+    height: 90%;
+}
+
+.linkages-office-functions-cont-left,
+.linkages-office-functions-cont-right{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.linkages-office-functions-cont-left h1{
+    font-size: 92.19px;
+    font-weight: 700;
+    color: #fff;
+    line-height: .9;
+    /* margin: 0; */
+}
+.linkages-office-functions-cont-left p,
+.linkages-office-functions-cont-right p{
+    font-size: 19.19px;
+    font-weight: 400;
+    color: #fff;
+}
+
+
+
+
+
+/* -------------------------- */
+.linkages-contact-us{
+    margin-top: 100px;
+    width: 100vw;
+    height: 400px;
+    /* background-color: pink; */
+    margin-bottom: 30px;
+}
+
+.linkages-contact-us-cont-pos{
+    width: 1105px;
+    height: 366px;
+    /* border: solid 1px green; */
+    margin-left: 10%;
+}
+.linkages-contact-us-cont-cont{
+    display: flex;
+    justify-content: space-between;
+    /* border: solid 1px yellow; */
+    height: 310px;
+}
+
+
+.linkages-contact-us-title h1{
+    font-size: 61.93px;
+    font-weight: 600;
+    color: #7c0a02;
+    margin-bottom: 15px;
+}
+.linkages-contact-us-cont-cont-left-loc{
+    font-size: 23.67px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 40px;
+}
+.linkages-contact-us-cont-cont-left-officehrs{
+    font-size: 19.64px;
+    margin: 0;
+}
+.linkages-contact-us-cont-cont-right{
+    font-size: 23.67px;
+}
+
+
+.linkages-contact-us-cont-cont-divider{
+    width: 1px;
+    border: solid 1px #E2E8F0;
+}
