@@ -213,16 +213,23 @@
         $totalRow = $totalResult->fetch_assoc();
         $totalPages = ceil($totalRow['total'] / $limit);
 
+        if ($totalPages < 1) {
+            $totalPages = 1;
+        }
+        
         // Previous Arrow
-        echo '<button class="page-button" onclick="loadPage(' . max(1, $page - 1) . ')">&lt;</button>';
+        $previousPage = ($page > 1) ? $page - 1 : $totalPages; 
+        echo '<button class="page-button" onclick="loadPage(' . $previousPage . ')">&lt;</button>';
 
         // Page Numbers
         for ($i = 1; $i <= $totalPages; $i++) {
-            echo '<button class="page-button ' . ($i == $page ? 'active' : '') . '" onclick="loadPage(' . $i . ')">' . $i . '</button>';
-        }
+        $activeClass = ($i == $page) ? 'active' : '';
+        echo '<button class="page-button ' . $activeClass . '" data-page="' . $i . '" onclick="loadPage(' . $i . ')">' . $i . '</button>';
+    }
 
         // Next Arrow
-        echo '<button class="page-button" onclick="loadPage(' . min($totalPages, $page + 1) . ')">&gt;</button>';
+        $nextPage = ($page < $totalPages) ? $page + 1 : 1; 
+        echo '<button class="page-button" onclick="loadPage(' . $nextPage . ')">&gt;</button>';
 
         ?>
     </div>

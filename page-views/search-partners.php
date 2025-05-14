@@ -56,5 +56,30 @@ if ($result->num_rows > 0) {
     echo '<p>No partners found.</p>';
 }
 
+// --- DELIMITER ---
+echo '<!--PAGINATION_DELIMITER-->';
+
+// Pagination
+$totalQuery = "SELECT COUNT(*) AS total FROM partners WHERE 1=1";
+if (!empty($search)) {
+    $totalQuery .= " AND (name LIKE '%$search%' OR location LIKE '%$search%')";
+}
+if ($category !== 'all') {
+    $totalQuery .= " AND type = '$category'";
+}
+$totalResult = $conn->query($totalQuery);
+$totalRow = $totalResult->fetch_assoc();
+$totalPages = ceil($totalRow['total'] / $limit);
+if ($totalPages < 1) $totalPages = 1;
+
+$previousPage = ($page > 1) ? $page - 1 : $totalPages;
+echo '<button class="page-button" onclick="loadPage(' . $previousPage . ')">&lt;</button>';
+for ($i = 1; $i <= $totalPages; $i++) {
+    $activeClass = ($i == $page) ? 'active' : '';
+    echo '<button class="page-button ' . $activeClass . '" data-page="' . $i . '" onclick="loadPage(' . $i . ')">' . $i . '</button>';
+}
+$nextPage = ($page < $totalPages) ? $page + 1 : 1;
+echo '<button class="page-button" onclick="loadPage(' . $nextPage . ')">&gt;</button>';
+
 $conn->close();
 ?>

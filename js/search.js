@@ -1,50 +1,45 @@
 function searchPartners() {
     const searchInput = document.getElementById('search-input').value;
+    const category = document.querySelector('.our-partners-category-cont button.active').dataset.category;
 
     const xhr = new XMLHttpRequest();
-    // xhr.open('GET', `search-partners.php?search=${encodeURIComponent(searchInput)}`, true);
-    xhr.open('GET', `../page-views/search-partners.php?search=${encodeURIComponent(searchInput)}`, true);
+    xhr.open('GET', `../page-views/search-partners.php?search=${encodeURIComponent(searchInput)}&category=${encodeURIComponent(category)}`, true);
     xhr.onload = function () {
         if (xhr.status === 200) {
-            document.getElementById('partners-grid').innerHTML = xhr.responseText;
+            const parts = xhr.responseText.split('<!--PAGINATION_DELIMITER-->');
+            document.getElementById('partners-grid').innerHTML = parts[0];
+            document.querySelector('.pagination').innerHTML = parts[1];
         }
     };
     xhr.send();
 }
 
 function loadPage(page) {
-    const type = document.getElementById('filter-type').value;
-    const region = document.getElementById('filter-region').value;
+    const searchInput = document.getElementById('search-input').value;
+    const category = document.querySelector('.our-partners-category-cont button.active').dataset.category;
 
-    // Send AJAX request for pagination
     const xhr = new XMLHttpRequest();
-    xhr.open('GET', `../page-views/search-partners.php?page=${page}`, true);
-
+    xhr.open('GET', `../page-views/search-partners.php?page=${page}&search=${encodeURIComponent(searchInput)}&category=${encodeURIComponent(category)}`, true);
     xhr.onload = function () {
         if (xhr.status === 200) {
-            document.getElementById('partners-grid').innerHTML = xhr.responseText;
-
-            // Update active page button
-            const buttons = document.querySelectorAll('.pagination .page-button');
-            buttons.forEach(button => button.classList.remove('active'));
-            document.querySelector(`.pagination .page-button:nth-child(${page + 1})`).classList.add('active');
+            const parts = xhr.responseText.split('<!--PAGINATION_DELIMITER-->');
+            document.getElementById('partners-grid').innerHTML = parts[0];
+            document.querySelector('.pagination').innerHTML = parts[1];
         }
     };
-
-    xhr.onerror = function () {
-        console.error('An error occurred during the AJAX request.');
-    };
-
     xhr.send();
 }
 
 function filterPartners(category) {
+    const searchInput = document.getElementById('search-input').value;
     const xhr = new XMLHttpRequest();
-    xhr.open('GET', `../page-views/search-partners.php?category=${encodeURIComponent(category)}`, true);
+    xhr.open('GET', `../page-views/search-partners.php?category=${encodeURIComponent(category)}&search=${encodeURIComponent(searchInput)}`, true);
 
     xhr.onload = function () {
         if (xhr.status === 200) {
-            document.getElementById('partners-grid').innerHTML = xhr.responseText;
+            const parts = xhr.responseText.split('<!--PAGINATION_DELIMITER-->');
+            document.getElementById('partners-grid').innerHTML = parts[0];
+            document.querySelector('.pagination').innerHTML = parts[1];
 
             // Update active button
             const buttons = document.querySelectorAll('.our-partners-category-cont button');
@@ -59,34 +54,3 @@ function filterPartners(category) {
 
     xhr.send();
 }
-
-function filterPartnersByType() {
-    const type = document.getElementById('filter-type').value;
-    const region = document.getElementById('filter-region').value;
-
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', `../page-views/search-partners.php?type=${type}&region=${region}`, true);
-    xhr.onload = function () {
-        if (xhr.status === 200) {
-            document.getElementById('partners-grid').innerHTML = xhr.responseText;
-        }
-    };
-    xhr.send();
-}
-
-function filterPartnersByRegion() {
-    const type = document.getElementById('filter-type').value;
-    const region = document.getElementById('filter-region').value;
-
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', `../page-views/search-partners.php?type=${type}&region=${region}`, true);
-    xhr.onload = function () {
-        if (xhr.status === 200) {
-            document.getElementById('partners-grid').innerHTML = xhr.responseText;
-        }
-    };
-    xhr.send();
-}
-
-
-
