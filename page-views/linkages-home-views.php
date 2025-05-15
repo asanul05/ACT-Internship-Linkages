@@ -24,7 +24,9 @@
 </section>
 
 <section class="linkages-partnership-statistic">
-    <div><h1 class="linkages-partnership-statistic-h1">Linkages & Partnership Statistics</h1></div>
+    <div>
+        <h1 class="linkages-partnership-statistic-cont">Linkages & Partnership Statistics </h1>
+    </div>
     
     <div class="linkages-partnership-statistic-sections">
         <div class='linkages-partnership-statistic-img-cont'>
@@ -32,13 +34,17 @@
         </div>
         <div class="linkages-partnership-statistic-text-cont">
             <div class="linkages-partnership-statistic-text-cont-top">
-                <h1>57 or <?php echo $overallCount; ?></h1>
-                <h1>Total Collaborations</h1>
-                <p>United for global academic growth</p>
+                <div class='partner-count'>
+                    <h1> <?php echo $overallCount;  ?> </h1>
+                </div>
+                <div class='partner-count-desc'>
+                    <h1>Total Collaborations</h1>
+                    <p>United for global academic growth</p>
+                </div>
             </div>
            
             <div class="linkages-partnership-statistic-text-cont-bot">
-                <p>Together, our national and international linkages form <br>a strong foundation for WMSU’s global impact and <br> future-ready education.</p>    
+                <p>Together, our national and international linkages form a strong foundation for WMSU’s global impact and future-ready education. </p>    
             </div>
         </div>
     </div>
@@ -46,12 +52,16 @@
     <div class="linkages-partnership-statistic-sections">
         <div class="linkages-partnership-statistic-text-cont">
             <div class="linkages-partnership-statistic-text-cont-top">
-                <h1>18 or <?php echo $nationalCount; ?></h1>
-                <h1>National Partners</h1>
-                <p>Across the Philippines</p>
+                <div class='partner-count'>
+                    <h1><?php echo $nationalCount; ?></h1>
+                </div>
+                <div class='partner-count-desc'>
+                    <h1>National Partners</h1>
+                    <p>Across the Philippines</p>
+                </div>
             </div>
             <div class="linkages-partnership-statistic-text-cont-bot">
-                <p>WMSU actively collaborates with key institutions <br>across the Philippines to advance regional <br> development and academic excellence.</p>    
+                <p>WMSU actively collaborates with key institutions across the Philippines to advance regional development and academic excellence.</p>    
             </div>
         </div>
         <div class='linkages-partnership-statistic-img-cont'>
@@ -66,13 +76,17 @@
 
         <div class="linkages-partnership-statistic-text-cont">
             <div class="linkages-partnership-statistic-text-cont-top">
-                <h1>23 or <?php echo $internationalCount; ?></h1>
-                <h1>International Partners</h1>
-                <p>In 18 countries worldwide</p>
+                <div class='partner-count'>
+                    <h1><?php echo $internationalCount; ?></h1>
+                </div>
+                <div class='partner-count-desc'>
+                    <h1>International Partners</h1>
+                    <p>In 18 countries worldwide</p>
+                </div>
             </div>
            
             <div class="linkages-partnership-statistic-text-cont-bot">
-                <p>WMSU’s international partnerships foster cultural <br> exchange, collaborative research, and global <br> innovation through strong academic linkages.</p>    
+                <p>WMSU’s international partnerships foster cultural exchange, collaborative research, and global    innovation through strong academic linkages.</p>    
             </div>
         </div>
     </div>
@@ -80,11 +94,12 @@
 
 <section class="featured-partners">
     <div class='featured-partners-title'>
-        <h1>FEATURED PARTNERS</h1>
+        <h1>FEATURED PARTNERS </h1>
     </div>
-
     <div class='featured-partners-sections'>
-        <img src="../imgs/featured-partners-huawei.png" alt="">
+        <div class='featured-partners-sections-img-cont'>
+            <img src="../imgs/featured-partners-huawei.png" alt="">
+        </div>
 
         <div class='featured-partners-sections-text-cont'>
             <div class='featured-partners-sections-text-cont-top-cont'>
@@ -93,14 +108,16 @@
             </div>
 
             <div class='featured-partners-sections-text-cont-bot-cont'>
-                <p>an exciting collaboration that typically focuses on technology development, digital skills training, and research initiatives in the field of information and communication technology (ICT). </p>
+                <p>an exciting collaboration that typically focuses on technology development, digital skills training, and research initiatives in the field of information and communication technology (ICT).</p>
             </div>
             
         </div>
     </div>
 
     <div class='featured-partners-sections'>
-        <img src="../imgs/featured-partners-seameo.png" alt="">
+        <div class='featured-partners-sections-img-cont'>
+            <img src="../imgs/featured-partners-seameo.png" alt="">
+        </div>
 
         <div class='featured-partners-sections-text-cont'>
             <div class='featured-partners-sections-text-cont-top-cont'>
@@ -118,8 +135,8 @@
 
 <section class='home-eliro'>
     <div class='home-eliro-title-cont'>
-        <p>EXTERNAL LINKAGES AND INTERNATIONAL RELATIONS OFFICE</p>
-        <h1>The ELIRO: Bridging WMSU and the World</h1>
+        <p>EXTERNAL LINKAGES AND INTERNATIONAL RELATIONS OFFICE </p>
+        <h1>The ELIRO: Bridging WMSU and the World </h1>
     </div>
 
     <div class='home-eliro-cont'>
@@ -132,7 +149,7 @@
                 <h1>DR. MARIO R. OBRA JR</h1>
                 <p>Director, Quality Management Office, International <br> Relations Office & External Linkages</p>
     
-                <p id='p2'>Learn More About ELIRO</p>
+                <p id='p2'>Learn More About ELIRO Learn More About ELIRO</p>
             </div>
         </div>
     </div>
